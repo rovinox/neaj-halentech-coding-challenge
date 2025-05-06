@@ -1,0 +1,18 @@
+
+version: "3.4"
+
+services:
+  postgres:
+    container_name: restaurant-db
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: restaurantdb
+      POSTGRES_PASSWORD: 1123
+
+volumes:
+  postgres_data:
